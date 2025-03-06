@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HypeChat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        function setLanguage(lang) {
+            localStorage.setItem('language', lang);
+            window.location.href = 'chat.html';
+        }
+    </script>
+</head>
+<body class="bg-gray-100 font-roboto flex items-center justify-center h-screen">
+    <div class="text-center">
+        <h1 class="text-4xl font-bold mb-4">Welcome to HypeChat</h1>
+        <p class="text-lg mb-8">Connect with strangers and chat in real-time.</p>
+        <div class="flex justify-center space-x-4 mb-8">
+            <button onclick="setLanguage('en')" class="bg-gray-200 text-gray-700 px-4 py-2 rounded hover:bg-gray-300">EN</button>
+            <button onclick="setLanguage('pt')" class="bg-gray-200 text-gray-700 px-4 py-2 rounded hover:bg-gray-300">PT</button>
+            <button onclick="setLanguage('es')" class="bg-gray-200 text-gray-700 px-4 py-2 rounded hover:bg-gray-300">ES</button>
+        </div>
+        <a href="chat.html" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition duration-300">
+            <i class="fas fa-comments"></i> Start Chatting
+        </a>
+    </div>
+</body>
+</html>
